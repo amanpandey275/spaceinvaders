@@ -1,9 +1,34 @@
+
+.heading{
+    font-size: 100px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: rgb(247, 218, 174);
+    /* font-family: 'Nothing You Could Do', cursive; */
+    /* font-family: 'Waiting for the Sunrise', cursive; */
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight: bolder;
+
+}
+
+.results{
+    /* border: 2px solid black; */
+    text-align: center;
+    color: aliceblue;
+    font-size: 35px;
+}
+.grid-container{
+    display: flex;
+    justify-content: center;
+}
 .grid {
+
     width: 300px;
     height: 300px;
-    border: solid black 2px;
+    border: solid black 5px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .grid div{
     width: 20px;
@@ -11,7 +36,7 @@
 }
 .invader
 {
-    background-color: rgb(100, 4, 97);
+    background-color: rgb(214, 87, 87);
     border-radius: 15px;
 }
 .shooter
@@ -28,3 +53,80 @@
     background-color: brown;
     border-radius: 15px;
 }
+
+.restart-btn{
+    margin-top: 40px;
+    width: 150px;
+    height: 70px;
+    font-size: 40px;
+}
+
+.game-over{
+    
+    font-size: 50px;
+    color: #785f2b;
+    text-align: center;
+    left: 0;
+    top:200px;
+    background-color: rgb(247, 218, 174);
+    justify-self: flex-end;
+
+
+}
+.after-play{
+    color: #785f2b;
+    font-size: 33px ;
+    width: 500px;
+    height: 100px;
+    border: none;
+    box-shadow: 0;
+    border-radius: 10px;
+    align-self: center;
+
+
+}
+.after-play:hover{
+    background-color: #785f2b;
+    font-weight: bolder;
+    color:rgb(247, 218, 174) ;
+
+    
+}
+span{
+    position: absolute;
+    background-color: rgb(247, 218, 174);
+    left: 0;
+    top: 280px;
+    width: 100%;
+    height: 50%;
+    /* border: 3px solid white; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+@media (max-width:450px) {
+    .heading{
+        font-size: 55px;
+        margin-bottom: 20px;
+    }
+    span{
+        top: 190px;
+
+
+    }
+    html{
+        background-size: contain;
+        height: 100%;
+    }
+    .after-play{
+        width: 100%;
+
+        top:400px;
+        left: 0;
+    }
+
+
+}
+

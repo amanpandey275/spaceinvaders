@@ -1,5 +1,6 @@
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
+
 let currentShooterIndex = 202
 let width = 15
 let direction = 1
@@ -83,17 +84,24 @@ function moveInvaders() {
 
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
     resultsDisplay.innerHTML = 'GAME OVER'
+    // let playagain=document.getElementsByClassName("grid");
+
+    grid.innerHTML=`<span><h1 class="game-over" ">You Loose!</h1> <button class="after-play" onclick="location.reload()">Click to playAgain</button></span>`;
+
     clearInterval(invadersId)
   }
-
+  
   for (let i = 0; i < alienInvaders.length; i++) {
     if(alienInvaders[i] > (squares.length)) {
       resultsDisplay.innerHTML = 'GAME OVER'
+      // let playagain=document.getElementsByClassName("grid");
+    // grid.innerHTML=`<h1>Game Over</h1> <button onclick="location.reload()">Click to playAgain</button>`;
       clearInterval(invadersId)
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
     resultsDisplay.innerHTML = 'I WON'
+    grid.innerHTML=`<span><h1 class="game-over" ">You hooo!</h1> <button class="after-play" onclick="location.reload()">Click to PlayAgain</button></span>`;
     clearInterval(invadersId)
   }
 }

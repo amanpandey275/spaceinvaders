@@ -86,7 +86,7 @@ function moveInvaders() {
     resultsDisplay.innerHTML = 'GAME OVER'
     // let playagain=document.getElementsByClassName("grid");
 
-    grid.innerHTML=`<span><h1 class="game-over" ">You Loose!</h1> <button class="after-play" onclick="location.reload()">Click to playAgain</button></span>`;
+    grid.innerHTML=`<span><h1 class="game-over" ">You Loose!</h1> <button class="after-play" onclick="location.reload()">Click to PlayAgain</button></span>`;
 
     clearInterval(invadersId)
   }
